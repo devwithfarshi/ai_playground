@@ -25,7 +25,6 @@ const generateController = async (req: Request, res: Response) => {
     }
 
     if (stream) {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
       res.setHeader("Content-Type", "text/event-stream");
       res.setHeader("Cache-Control", "no-cache");
       res.setHeader("Connection", "keep-alive");
